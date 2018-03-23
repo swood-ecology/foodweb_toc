@@ -4,7 +4,7 @@ library(googlesheets)
 library(tidyverse)
 
 all_data <- gs_title("data_collection.xlsx")
-raw_data <- gs_read(ss=data, ws = "Raw Evidence")
+raw_data <- gs_read(ss=all_data, ws = "Raw Evidence")
 raw_data <- as_tibble(raw_data)
 
 # Generate nodes, properties, and trophic.links
